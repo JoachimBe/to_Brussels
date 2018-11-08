@@ -3,13 +3,6 @@
   background-color: #335C62;
 }
 
-.App-logo {
-  /*animation: App-logo-spin infinite 20s linear;*/
-  height: 5vmax;
-  float: left;
-  margin-left: 1vh;
-}
-
 .Help-button{
   float:left;
   margin-top: 3vh;
@@ -36,10 +29,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-h1{
-  display: inline;
-  clear: both;
-  margin-left:none;
 }
