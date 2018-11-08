@@ -12,16 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-
-h1{
-  display: inline;
-  clear: both;
-  margin-right: 15%;
-}
-
-.App-logo {
-  height: 5vmax;
-  float: left;
-  margin-left: 1vh;
-}
