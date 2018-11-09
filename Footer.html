@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="....css" />
+      <title>Footer</title>
+   </head>
+   <body>
+       <footer>
+            <ul>
+                    <li><a class="footer_text" href="#">Legal</a></li>
+                    <li><a class="footer_text" href="">About us</a></li>
+                    <li><a class="footer_text" href="">To Brussels ©</a></li>
+              </ul>
+       </footer>
+   </body>
+</html>
+
+
+----------
+
+<footer>
+    <p>
+        <a class = "footer_text" href="">Legal</a>
+        <a class = "footer_text" href="">About us</a>
+        <a class = "footer_text">To Brussels ©</a>
+    </p>
+</footer>  
+
+footer{
+	background-color: #335c62;
+	padding: 5px;
+  color: #fff;
+  text-align: right;
+  position:relative;
+}
+.footer_text{
+  padding-right: 1em;
+  padding-left: 1em;
+  font-size: 15px;
+  float: right;
+}
+
+@media screen and (max-width:500px){
+	footer{
+		flex-direction: column;
+  }
+}
