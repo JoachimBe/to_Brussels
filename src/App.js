@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Footer from './components/footer/index.js';
+import Footer from './components/Footer/index.js';
 
 class App extends Component {
   render() {

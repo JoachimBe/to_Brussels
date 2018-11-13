@@ -2,34 +2,24 @@ footer{
 	background-color: #335c62;
 	padding: 5px;
 	color: #fff;
-  position: relative;
-  font-size: 15px;
-}
-
-footer ul{
-	display: flex;
-	margin: 0;
-	padding: 0;
-	flex-wrap: wrap;
-}
-
-footer ul li{
-	list-style: none;
-	margin: 1em;
-  display: block;
 }
 
 .footer-link{
-	text-align: right;
+	text-align: center;
+	margin: 1em;
+  display: block;
 }
 .footer-list{
 	display: flex;
-	justify-content: flex-end;
-
+	margin: 0;
+	padding: 0;
+	flex-direction: column;
+	list-style: none;
 }
 
-@media screen and (max-width:500px){
-	footer ul{
-		flex-direction: column;
+ @media screen and (min-width:500px){
+	.footer-list{
+		flex-direction: row;
+		justify-content: flex-end;
   }
-}
+}  
