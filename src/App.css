@@ -3,14 +3,6 @@
   background-color: #335C62;
 }
 
-.App-header {
-  min-height: 2vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 3vmin);
-  display: inline;
-}
 
 .App-link {
   color: #61dafb;

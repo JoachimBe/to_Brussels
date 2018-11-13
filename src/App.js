@@ -6,10 +6,8 @@ import  './components/header/main.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div>
         <Header/>
-        </header>
       </div>
     );
   }
