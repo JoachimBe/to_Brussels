@@ -21,10 +21,16 @@
   margin-left: 2%;
 }
 
-@media screen and (min-width: 800px){
-
+@media screen and (min-width: 415px){
+  .Titre{
+    margin-left: 35%;
+    margin-right: 20%;
+  }
 }
 
 @media screen and (min-width: 800px){
 
+  .button-right{
+    margin-left: 5%;
+  }
 }
