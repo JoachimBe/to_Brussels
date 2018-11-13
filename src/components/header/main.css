@@ -3,60 +3,28 @@
 }
 
 
-/*.Titre{
-    display: inline;
-    clear: both;
-    margin-right: 35%;
-  }*/
+.Titre{
+  display: inline-block; 
+  margin-right: 5%; 
+  margin-left: 7%;
+}
   
     /* RIGHT */
 
+.logo-right{
+  max-height: 1.5em;
+  width: 1.5em;
+  margin-left: 2%;
+}
 
-    .logo-right .button-right{
-      left: 90%;
-    }
-  .logo-right{
-    right: Opx;
-    height: 6vh;
-  }
-  .logo-left {
-    height: 5vmax;
-    float: left;
-    margin-left: 1vh;
-  }
+.button-right{
+  margin-left: 2%;
+}
 
-  @media screen and (max-width: 800px){
-    .Titre{
-      margin: auto;
-    }
-    .Help-button{
-      float:right;
-    }
-    .App-logo{
-      height: 8vmax;
-    }
-    .Help-button{
-      margin-top: 3vmax;
-    }
-  }
+@media screen and (min-width: 800px){
 
-  @media screen and (max-width: 380px){
-    .logo-right{
-      max-height: 1em;
-      width: 1em;
-    }
-    .button-right{
-      margin-right: 1em;
-      margin-left: 2em;
-    }
-  }
+}
 
-  @media screen and (min width: 800px){
-    .Help-button{
-      float:left;
-      margin-top: 3vh;
-      margin-left: 3vh;
-      margin-right: 0px;
-      padding-right: 0px;
-    }
-  }
+@media screen and (min-width: 800px){
+
+}
