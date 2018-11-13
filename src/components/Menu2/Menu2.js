@@ -7,16 +7,22 @@ class Menu2 extends React.Component{
     }
     render(){
         return(
-            <div>
-                <form>
-                    <p>Course</p>
+            <div className="sidebar">
+                <form action="" method="">
+                    <span>Course</span>
                     <ol>
-                    <li><input type="radio" name="kilometers" value="5">5 Km</input></li>
-                    <li><input type="radio" name="kilometers" value="10">10 Km</input></li>
-                    <li><input type="radio" name="kilometers" value="15">15 Km</input></li>
-                    <li><input type="radio" name="kilometers" value="20">20 Km</input></li>
+                        <li><input type="radio" name="kilometers" value="5"></input><label for='5'>5 Km</label></li>
+                        <li><input type="radio" name="kilometers" value="10"></input><label for='10'>10 Km</label></li>
+                        <li><input type="radio" name="kilometers" value="20"></input><label for='15'>15 Km</label></li>
+                        <li><input type="radio" name="kilometers" value="15"></input><label for='20'>20 Km</label></li>
                     </ol>
-                    <input type="radio" name="loop" value='true'>In Loop</input>
+                    <p>
+                    <input type="radio" name="loop" value='true'></input>In Loop
+                    </p>
+                    <label className="lab4input" for='adress'>To an adress:</label>
+                    <input type="text" name="adress" required size="3"/>
+                    
+                    <input type="submit" className="buttonTwo" value="Go to map"/>
                 </form>
             </div>
         );

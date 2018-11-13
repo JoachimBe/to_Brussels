@@ -1,0 +1,72 @@
+* {
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+    }
+    
+    .sidebar{
+    position:fixed;
+    width:200px;
+    height:100%;
+    background:#335c62; 
+    
+    }
+    
+    #sidebar.active{
+    left:0px;
+    }
+    
+    
+    .logo{
+    position:absolute;
+    width:80px;
+    left :25px;
+    top:10px;
+    }
+    .help{
+    position: absolute;
+    height:20px;
+    left:20px;
+    }
+    
+    /*hamburger menu*/
+    
+    .sidebar .toggle-btn{
+    position:absolute;
+    left:220px;
+    top:15px;
+    }
+    
+    .sidebar .toggle-btn span{
+    display:block;
+    width:30px;
+    height:5px;
+    background: black;
+    margin:3px 0px;
+    }
+    
+    /* boutons */
+    
+    .buttonTwo{
+    font-family: sans-serif;
+    padding:20px 10px;
+    outline: none;
+    background-color: #578A90;
+    border: none;
+    border-radius:10px;
+    
+    position:relative;
+    top:180px;
+    color:white;
+    font-size:18px; 
+    }
+    .buttonTwo:hover{
+    background-color:#49757c;
+    color:white;
+    
+    }
+
+    /*LABEL*/
+    .lab4input{
+        display: block;
+    }
