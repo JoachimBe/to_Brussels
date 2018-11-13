@@ -1,12 +1,14 @@
-.App {
+.header {
   background-color: #335C62;
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  justify-content: center;
 }
 
 
-.Titre{
-  display: inline-block; 
-  margin-right: 5%; 
-  margin-left: 7%;
+.title{
+  color: white;
 }
   
     /* RIGHT */

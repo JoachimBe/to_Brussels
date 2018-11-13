@@ -4,9 +4,9 @@ import print from './printt.png';
 
 class Header extends React.Component{
     render(){
-        return( <div className="App">
+        return( <div className="header">
             
-            <h1 className="Titre">To Brussels</h1>
+            <h1 className="title">To Brussels</h1>
             <button className="button-right"><img src={save} className="logo-right" /></button>
             <button className="button-right"><img src={print} className="logo-right" /></button>
         </div>
