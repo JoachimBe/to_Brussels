@@ -12,21 +12,11 @@
     
     }
     
-    #sidebar.active{
-    left:0px;
-    }
-    
-    
     .logo{
     position:absolute;
     width:80px;
     left :25px;
     top:10px;
-    }
-    .help{
-    position: absolute;
-    height:20px;
-    left:20px;
     }
     
     /*hamburger menu*/
@@ -54,11 +44,10 @@
     background-color: #578A90;
     border: none;
     border-radius:10px;
-    
-    position:relative;
-    top:180px;
     color:white;
-    font-size:18px; 
+    font-size:18px;
+    display: block;
+    margin: auto;
     }
     .buttonTwo:hover{
     background-color:#49757c;

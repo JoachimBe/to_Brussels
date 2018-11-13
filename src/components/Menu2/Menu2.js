@@ -9,7 +9,7 @@ class Menu2 extends React.Component{
         return(
             <div className="sidebar">
                 <form action="" method="">
-                    <span>Course</span>
+                <input className="typeParcour" type="radio" name="course" value="course_simple"></input><span> Course</span>
                     <ol>
                         <li><input type="radio" name="kilometers" value="5"></input><label for='5'>5 Km</label></li>
                         <li><input type="radio" name="kilometers" value="10"></input><label for='10'>10 Km</label></li>
@@ -17,9 +17,9 @@ class Menu2 extends React.Component{
                         <li><input type="radio" name="kilometers" value="15"></input><label for='20'>20 Km</label></li>
                     </ol>
                     <p>
-                    <input type="radio" name="loop" value='true'></input>In Loop
+                    <input type="radio" name="loop" value='loop'></input>In Loop
                     </p>
-                    <label className="lab4input" for='adress'>To an adress:</label>
+                    <label className="typeParcour lab4input" for='adress'>To an adress:</label>
                     <input type="text" name="adress" required size="3"/>
                     
                     <input type="submit" className="buttonTwo" value="Go to map"/>
