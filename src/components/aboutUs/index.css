@@ -1,0 +1,26 @@
+.creators ul{
+    list-style: none;
+}
+.photo1{
+    position: relative;
+    top: -90px;
+}
+.photo1-description{
+    position: relative;
+    left: 15%;
+    top: 100px;
+}
+.photo2{
+    position: relative;
+    top: -189px;
+    left: 220px;
+}
+.photo3{
+    position: relative;
+    top: -280px;
+}
+.photo1-description{
+    position: relative;
+
+    top: 100px;
+}
