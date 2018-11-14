@@ -1,49 +1,23 @@
-
-body{
-    text-align: justify;
-    margin: 1em;
+.creators{
+    display: flex;
+    flex-direction: column;
+    max-width: 690px;
+    margin: 0;
+    align-items: center;
 }
 .photo{
     height: 300px;
-    position: relative;
-    left: 70px;
-}
-.photo-description{
-    position: relative;
-    left: 70px;    
+    left: 0px;
 }
 
 @media screen and (min-width:500px){
-    .photo1{
-        height: 300px;
-        left: 0px;
+    .creator:nth-child(even){
+        flex-direction: row-reverse
     }
-    .photo1-description{
-        left: 240px;
-        top: -220px;
+    .photo-description{
+         margin: 50px;    
     }
-    .photo2{
-        left: 240px;
-        top: -100px;
-    }
-    .photo2-description{
-        left: 0px;
-        top: -300px;
-    }
-    .photo3{
-        left: 0px;
-        top: -190px;
-    }
-    .photo3-description{
-        left: 240px;
-        top: -405px;
-    }
-    .sizepage{
-        max-height: 1200px; 
-        max-width: 1440px;
-    }
-    .creators{
-        max-height: 990px; 
-        max-width: 1440px;
+    .creator{
+        display: flex;
     }
 }
