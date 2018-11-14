@@ -13,24 +13,24 @@ class AboutUs extends React.Component {
                 <h2>Meet the creators</h2>
                 <div className="creators">
                     <div className="creator">
-                        <img className="photo photo1" src="https://i.goopics.net/q47Dn.png" alt="Anja" />
-                        <div className="photo-description photo1-description">
+                        <img className="photo" src="https://i.goopics.net/q47Dn.png" alt="Anja" />
+                        <div className="photo-description">
                             <p>Anja Razafitrimo</p>
                             <p>24 years old</p>
                             <p>Student at Wilde Code School</p>
                         </div>
                     </div>
                     <div className="creator">
-                        <img className="photo photo2" src="https://i.goopics.net/g3ODJ.png" alt="Cristina" />
-                        <div className="photo-description photo2-description">
+                        <img className="photo" src="https://i.goopics.net/g3ODJ.png" alt="Cristina" />
+                        <div className="photo-description">
                             <p>Cristina Gonzalez</p>
                             <p>22 years old</p>
                             <p>Student at Wilde Code School</p>
                         </div>
                     </div>
                     <div className="creator">
-                        <img className="photo photo3" src="https://i.goopics.net/keyDe.png" alt="Joachim" />
-                        <div className="photo-description photo3-description">
+                        <img className="photo" src="https://i.goopics.net/keyDe.png" alt="Joachim" />
+                        <div className="photo-description">
                             <p>Joachim Bertrand</p>
                             <p>27 years old</p>
                             <p>Student at Wilde Code School</p>
