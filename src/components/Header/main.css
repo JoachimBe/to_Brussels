@@ -24,7 +24,7 @@
 }
 
 @media screen and (min-width: 415px){
-  .Titre{
+  .title{
     margin-left: 35%;
     margin-right: 20%;
   }
@@ -32,7 +32,7 @@
 
 @media screen and (min-width: 800px){
 
-  .button-right{
-    margin-left: 5%;
+  .title{
+    margin-right: 35%;
   }
 }
