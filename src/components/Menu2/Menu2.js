@@ -2,14 +2,15 @@ import React from'react';
 import './main.css';
 
 class Menu2 extends React.Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props);
+        this.state = {value :""};
     }
     render(){
         return(
-            <div className="sidebar">
+            <div className="sideBar">
                 <form action="" method="">
-                <input className="typeParcour" type="radio" name="course" value="course_simple"></input><span> Course</span>
+                <input type="radio" name="course" value="course_simple"></input><span className="typeParcour"> Course</span>
                     <ol>
                         <li><input type="radio" name="kilometers" value="5"></input><label for='5'>5 Km</label></li>
                         <li><input type="radio" name="kilometers" value="10"></input><label for='10'>10 Km</label></li>
