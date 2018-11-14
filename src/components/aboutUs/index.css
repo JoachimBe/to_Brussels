@@ -6,11 +6,11 @@ body{
 .photo{
     height: 300px;
     position: relative;
-    left: 100px;
+    left: 70px;
 }
 .photo-description{
     position: relative;
-    left: 100px;    
+    left: 70px;    
 }
 
 @media screen and (min-width:500px){
@@ -38,8 +38,12 @@ body{
         left: 240px;
         top: -405px;
     }
+    .sizepage{
+        max-height: 1200px; 
+        max-width: 1440px;
+    }
     .creators{
-        max-height: 449px; 
+        max-height: 990px; 
         max-width: 1440px;
     }
 }
