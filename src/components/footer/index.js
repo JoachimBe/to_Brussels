@@ -4,7 +4,6 @@ import './index.css';
 class Footer extends React.Component{
     render() {
       return (
-        <div>
             <footer>
                 <ul class="footer-list">
                     <li><a className="footer-link" href="">Legal</a></li>
@@ -12,7 +11,6 @@ class Footer extends React.Component{
                     <li><a className="footer-link">To Brussels ©</a></li>
                 </ul>
             </footer>      
-        </div>
       );
     }
   }
