@@ -2,7 +2,6 @@
   background-color: #335C62;
   display: flex;
   align-items: center;
-  align-content: space-between;
   justify-content: center;
   position: relative;
 }
@@ -12,34 +11,31 @@
   color: white;
 }
   
-    /* RIGHT */
+    /*button RIGHT */
 
-.logo-right{
+.header-button .icon{
   max-height: 1.5em;
   width: 1.5em;
   margin-left: 2%;
 }
 
-.button-right{
+.header-button{
   margin-left: 2%;
 }
 
-@media screen and (min-width: 415px){
-  .title{
-    margin-left: 35%;
-    margin-right: 20%;
-  }
+.header-buttons{
+  display: flex;
+  
+  align-items: baseline;
+  flex-direction:row;
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 600px){
 
-  .btn_group{
-    display: flex;
+  .header-buttons{
+    transform: translate(-50%,-50%);
     position: absolute;
     top:50%;
     right: 0%;
-    transform: translate(-50%,50%);
-    align-items: baseline;
-    flex-direction:row;
   }
 }
