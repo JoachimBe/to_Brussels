@@ -4,6 +4,7 @@
   align-items: center;
   align-content: space-between;
   justify-content: center;
+  position: relative;
 }
 
 
@@ -32,7 +33,13 @@
 
 @media screen and (min-width: 800px){
 
-  .title{
-    margin-right: 35%;
+  .btn_group{
+    display: flex;
+    position: absolute;
+    top:50%;
+    right: 0%;
+    transform: translate(-50%,50%);
+    align-items: baseline;
+    flex-direction:row;
   }
 }
