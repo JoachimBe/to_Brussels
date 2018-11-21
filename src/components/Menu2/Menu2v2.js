@@ -1,6 +1,6 @@
 import React from'react';
 import './main.css';
-import ReactDOM from 'react-dom';
+
 
 function visibleCourseList(props){
     if(!props.visibleList){
@@ -16,7 +16,6 @@ function visibleCourseList(props){
     <input type="radio" name="loop" value='loop' className={this.state.display}></input><label className={this.state.display}>In Loop</label></div>);
 }
 
-
 class Menu2 extends React.Component{
     constructor(props){
         super(props);
@@ -29,29 +28,36 @@ class Menu2 extends React.Component{
             visible: !state.visible
         }));
     }
-    
 
     render(){
         return(
             <div className="sideBar">
                 <form action="" method="">
-                <input type="radio" name="course" value="course_simple"></input><span className="typeParcour" onClick={this.hideToggleClick}> Course</span>
+                <input type="radio" name="course" value="course_simple"></input><span className="typeParcour" onClick={this.state.visible}> Course</span>
                     
-                    <visibleCourseList visibleList={this.state.visible}/>
+                    <visibleCourseList visible={this.state.visible}/>
                     <label className="typeParcour lab4input" for='adress'>To an adress:</label>
                     <input type="text" name="adress" required size="3" onClick={this.state.visible}/>
                     
                     <input type="submit" className="buttonTwo" value="Go to map"/>
                 </form>
-                <button type="button"> Retour</button>
             </div>
         );
     }
+
+
+
+    handleShowClick(){
+        this.setState({visible : true});
+    }
+    handleHideClick(){
+        this.setState({visible : false});
+    }
 }
 
-ReactDOM.render(
+ReactDom.render(
     <Menu2 />,
-    document.getElementById('root')
+    document.getElementById('')
 );
 
 export default Menu2;
