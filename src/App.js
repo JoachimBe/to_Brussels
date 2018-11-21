@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import Menu2 from './components/Menu2/Menu2.js'
+import Map from './components/Map/Map.js'
+import SimpleMap from './components/Map/Map';
 
 class App extends Component {
   render() {
     return (
-      <Menu2/>
+      <SimpleMap/>
     );
   }
 }
