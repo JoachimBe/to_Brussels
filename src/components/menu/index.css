@@ -1,0 +1,201 @@
+* {
+    margin:0px;
+    padding:0px;
+    font-family:  sans-serif;
+}
+
+.sidebar{
+    position:fixed;
+    width:200px;
+    height:100%;
+    background:#335c62;    
+}
+
+#sidebar.active{
+    left:0px;
+}
+
+
+
+
+.logo{
+    position:absolute;
+    width:80px;
+    left :50px;
+    top:10px;
+}
+.help{
+    position: absolute;
+    height:25px;
+    left:170px;
+    top:40px;
+}
+
+/*hamburger menu*/
+
+
+.toggle-btn{
+    position: fixed;
+    left : 220px;
+    z-index: 1;
+    
+    outline: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 15%;
+    margin-top: 2em;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+.toggle-btn:active{
+    transform: rotate(180deg);
+}
+.sidebar .toggle-btn .line-1{
+    display:block;
+    width:30px;
+    height:5px;
+    background: black;
+    margin:3px 0px;
+}
+
+.sidebar .toggle-btn .line-2{
+    display:block;
+    width:30px;
+    height:5px;
+    background: black;
+    margin:3px 0px;
+}
+.sidebar .toggle-btn .line-3{
+    display:block;
+    width:30px;
+    height:5px;
+    background: black;
+    margin:3px 0px;
+}
+
+
+
+
+/*logos*/
+
+.logo-museum{
+    position:relative;
+    height:20px;
+    left:65px;
+}
+.logo-comics{
+    position:relative;
+    height:27px;
+    left:85px;
+}
+.logo-monument{
+    position:relative;
+    height:27px;
+    left:40px;
+}
+.logo-streetart{
+    position:relative;
+    height:27px;
+    left:45px;
+}
+.logo-memorial{
+    position:relative;
+    height:27px;
+    left:53px;
+}
+.logo-basics{
+    position:relative;
+    height:25px;
+    left:85px;
+}
+
+/*liste section*/
+.basic:hover{
+    background-color:#5e888f;
+    color:white;
+}
+.basic:active{
+    background-color:#d4666c;
+    color:white;
+}
+
+.museum:hover{
+    background-color:#5e888f;
+    color:white;
+}
+.museum:active{
+    background-color:#eecf9f;
+    color:white;
+}.monument:hover{
+    background-color:#5e888f;
+    color:white;
+}
+.monument:active{
+    background-color:#5a9360;
+    color:white;
+}.comics:hover{
+    background-color:#5e888f;
+    color:white;
+}
+.comics:active{
+    background-color:#65c0bc;
+    color:white;
+}.streetart:hover{
+    background-color:#5e888f;
+    color:white;
+}
+.streetart:active{
+    background-color:#604762;
+    color:white;
+}.memorial:hover{
+    background-color:#5e888f;
+    color:white;
+}
+.memorial:active{
+    background-color:rgb(252, 188, 71);
+    color:white;
+}
+
+
+/* boutons */
+
+.button{
+    font-family: sans-serif;
+    padding:20px 10px;
+  outline: none;
+  background-color: #578a90;
+  border: none;
+  border-radius:10px;
+  
+  position:relative;
+  top:120px;
+  color:white;
+  font-size:18px;   
+  
+}
+.button:hover{
+    background-color:#49757c;
+    color:white;
+}
+
+.buttonTwo{
+    font-family: sans-serif;
+    padding:20px 10px;
+  outline: none;
+  background-color: #578a90;
+  border: none;
+  border-radius:10px;
+  
+  position:relative;
+  top:140px;
+  color:white;
+  font-size:18px; 
+}
+.buttonTwo:hover{
+    background-color:#49757c;
+    color:white;
+    
+}
