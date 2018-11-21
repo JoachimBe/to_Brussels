@@ -23,12 +23,6 @@ class Menu2 extends React.Component{
         this.hideToggleClick = this.hideToggleClick.bind(this);
     }
 
-    hideToggleClick(){
-        this.setState(state =>({
-            visible: !state.visible
-        }));
-    }
-
     render(){
         return(
             <div className="sideBar">
@@ -45,8 +39,11 @@ class Menu2 extends React.Component{
         );
     }
 
-
-
+    hideToggleClick(){
+        this.setState(state =>({
+            visible: !state.visible
+        }));
+    }
     handleShowClick(){
         this.setState({visible : true});
     }
@@ -54,10 +51,5 @@ class Menu2 extends React.Component{
         this.setState({visible : false});
     }
 }
-
-ReactDom.render(
-    <Menu2 />,
-    document.getElementById('')
-);
 
 export default Menu2;

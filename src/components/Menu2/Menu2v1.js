@@ -27,6 +27,7 @@ class Menu2 extends React.Component{
                     
                     <input type="submit" className="buttonTwo" value="Go to map"/>
                 </form>
+                <button type="button"> Retour</button>
             </div>
         );
     }
