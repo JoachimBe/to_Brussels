@@ -23,8 +23,8 @@ const SideMenu = props => {
             <li className="liste streetart">STREET ART<img src="https://i.goopics.net/EdqX5.png" className="logo-streetart" alt="streetart"></img></li>
             <li className="liste memorial">MEMORIALS<img src="https://i.goopics.net/O3q2Q.png" className="logo-memorial" alt="memorial"></img></li>
             <div className="boutons">
-                <button href="#" className="button"><p className="bouton-text">Generate <br/>a course</p></button>
-                <button href="#" className="buttonTwo"><p className="bouton-text">Go to Map</p></button>
+                <button href="#" className="button bouton-text">Generate a course</button>
+                <button href="#" className="button bouton-text">Go to Map</button>
             </div>
         </ul>
     </div>

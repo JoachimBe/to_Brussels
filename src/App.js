@@ -25,7 +25,7 @@ class App extends Component {
       backdrop= <Backdrop click={this.backdropClickHandler}/>;
     }
     return (
-      <div style={{height:"100%"}}>
+      <div>
         <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler}/>
       </div>
     );
