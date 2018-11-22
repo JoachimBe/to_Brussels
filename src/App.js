@@ -2,9 +2,20 @@ import React, { Component } from 'react';
 import SideMenu from "./components/Sidemenu/Sidemenu.js";
 import Backdrop from "./components/backdrop/backdrop.js";
 class App extends Component {
-  state = {
-    sideMenuOpen: false
-  };
+  constructor (props){
+    super(props);
+    this.state = {
+      sideMenuOpen: false,
+      places : {}
+    };
+  }
+
+  handleChange(data){
+console.log(data);
+    this.setState({
+      places:data
+    })
+  }
 
   menuToggleClickHandler = () =>{
     this.setState((prevState)=>{
@@ -26,7 +37,7 @@ class App extends Component {
     }
     return (
       <div>
-        <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler}/>
+        <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />
       </div>
     );
   }

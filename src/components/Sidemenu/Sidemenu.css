@@ -95,13 +95,13 @@
     color: white;
 }
 
-.museum:hover {
+.museums:hover {
     background-color: #5e888f;
     color: white;
 }
 
-.museum:active {
-    background-color: #eecf9f;
+.museums.active {
+    background-color: #F7567C;
     color: white;
 }
 
@@ -110,8 +110,8 @@
     color: white;
 }
 
-.monument:active {
-    background-color: #5a9360;
+.monument.active {
+    background-color: #C04ABC;
     color: white;
 }
 
@@ -120,7 +120,7 @@
     color: white;
 }
 
-.comics:active {
+.comics.active {
     background-color: #65c0bc;
     color: white;
 }
@@ -130,8 +130,8 @@
     color: white;
 }
 
-.streetart:active {
-    background-color: #604762;
+.streetart.active {
+    background-color:#43B929;
     color: white;
 }
 
@@ -140,7 +140,7 @@
     color: white;
 }
 
-.memorial:active {
+.memorial.active {
     background-color: rgb(252, 188, 71);
     color: white;
 }
