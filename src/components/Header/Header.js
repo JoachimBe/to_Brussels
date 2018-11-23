@@ -9,8 +9,6 @@ class Header extends React.Component{
             
             <h1 className="title">To Brussels</h1>
             <div className="header-buttons">
-            <button className="header-button"><img src={save} className="icon" /></button>
-            <button className="header-button"><img src={print} className="icon" /></button>
             </div>
         </div>
         )
