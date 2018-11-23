@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
+const Marker = ({ text }) => <div>{text}</div>;
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class SimpleMap extends Component {
+  static defaultProps = {
+    zoom: 14
+  };
   state= {
     location:{
-      lat: 50.8504500,
-      lng: 4.3487800
+      lat: 0,
+      lng: 0
     },
-      zoom: 12,
+      zoom: 2,
       haveUsersLocation: false,
     }
 
@@ -23,12 +27,17 @@ class SimpleMap extends Component {
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I' }}
           center={position}
-          defaultZoom={this.state.zoom}
+          zoom={this.state.zoom}
         >
           <AnyReactComponent
             lat={50.8504500}
             lng={4.3487800}
             text={'Bxll'}
+          />
+          <Marker
+            lat={this.state.lat}
+            lng={this.state.lng}
+            text={'Hello World!'}
           />
         </GoogleMapReact>
         </div>
@@ -54,14 +63,18 @@ class SimpleMap extends Component {
     });
   }
   componentDidMount(){
+    console.log('1 have user loc ? :', this.state.haveUsersLocation);
+    console.log(this.state.location);
     this.getLocation()
       .then(location =>{
         this.setState({
           location,
-          haveUserLocation: true,
+          haveUsersLocation: true,
           zoom:16
         })
       })
+    console.log(this.state.location);
+    console.log('2 have user loc', this.state.haveUsersLocation)
   }
 
 }
