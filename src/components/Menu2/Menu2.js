@@ -17,21 +17,21 @@ class Menu2 extends React.Component{
         
         return(
             <div className="sideBar">
+            <p className="welcome">Welcome, Adventurer<p className="welcome-text">Here begins your journey through Brussels' wonders ! You can either choose a fixed distance that will take you over a loop course, or enter a destination adress, if you already know where to go ;-)</p> </p>
                 <form action="" method="">
-                <input type="radio" name="course" value="course_simple"></input><span className="typeParcour" onClick={ev => this.showKilom()}> Course</span>
-                    <ol name="listK" className={this.state.display}>
-                        <li><input type="radio" name="kilometers" value="5"></input><label for='5'>5 Km</label></li>
-                        <li><input type="radio" name="kilometers" value="10"></input><label for='10'>10 Km</label></li>
-                        <li><input type="radio" name="kilometers" value="20"></input><label for='15'>15 Km</label></li>
-                        <li><input type="radio" name="kilometers" value="15"></input><label for='20'>20 Km</label></li>
-                    </ol>
-                    <input type="radio" name="loop" value='loop' className={this.state.display}></input><label className={this.state.display}>In Loop</label>
-                    <label className="typeParcour lab4input" for='adress'>To an adress:</label>
-                    <input type="text" name="adress" required size="3" onClick={ev => this.hideKiloM()}/>
+                <p className="typeParcour" onClick={ev => this.showKilom()}>How big is your will to visit ?</p>
+                    <ul name="listK" className={this.state.display}>
+                        <li><input className="choix-km" type="radio" name="kilometers" value="5"></input><label className="choix-km" for='5'>5 Km</label></li>
+                        <li><input className="choix-km" type="radio" name="kilometers" value="10"></input><label className="choix-km" for='10'>10 Km</label></li>
+                        <li><input className="choix-km" type="radio" name="kilometers" value="20"></input><label className="choix-km" for='15'>15 Km</label></li>
+                        <li><input className="choix-km" type="radio" name="kilometers" value="15"></input><label className="choix-km" for='20'>20 Km</label></li>
+                    </ul>
+                    <label className="typeParcour lab4input" for='adress'>Or enter your final destination:</label>
+                    <input className="adress" type="text" name="adress" required size="22" onClick={ev => this.hideKiloM()}/>
                     
                     <input type="submit" className="buttonTwo" value="Go to map"/>
                 </form>
-                <button type="button"> Retour</button>
+                <a className="back" href="#"><img className="back" src="https://i.goopics.net/NNmvW.png" alt="back"></img></a>
             </div>
         );
     }
@@ -45,7 +45,7 @@ class Menu2 extends React.Component{
     showKilom(){
         let nameToShow = document.getElementsByName('listK');
         for(let k = 0; k < nameToShow.length; k++){
-            this.setState({display : "show"});
+            this.setState({display : ""});
         }
     }
 

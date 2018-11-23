@@ -6,15 +6,60 @@
     
     .sideBar{
     position:fixed;
-    width:200px;
+    left:0;
+    top:56px;
+    margin:0;
+    width:220px;
     height:100%;
     background:#335c62; 
     flex-direction:column;
     }
     .typeParcour{
-        font-size: 1.5em;
+        font-size: 22px;
+        color:white;
+        max-width:80%;
+        padding: 0;
+        text-align: center;
+        border-top: 1px solid White;
+        border-bottom: 1px solid White;
+        margin:22px;
+        margin-bottom:10px;
+        margin-top:10px;
+    }
+    .welcome{
+        color:white;
+        font-size: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .welcome-text{
+        font-size: 15px;
+        border: 1px solid white;
+        text-transform: none;
+        max-width: 200px;
+        margin:10px;
+        padding:8px;
+    }
+    .adress{
+        margin:7%;
+        margin-top:0;
+    }
+    .choix-km{
+        color:white;
+        padding: 0 20px;
     }
     
+    li{
+        padding:2px;
+        width:100px;
+    }
+    ul{
+        list-style: none;
+        margin: 0 62px;
+    }
+    .back{
+        width:40px;
+    }
     /*hamburger menu*/
     
     .sidebar .toggle-btn{
@@ -48,7 +93,7 @@
     .buttonTwo:hover{
     background-color:#49757c;
     color:white;
-    
+
     }
 
     /*LABEL*/
