@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import icon from './DdeJX.png'
 
-const Marker = ({ text }) => <div>{text}</div>;
+const Marker = ({ img }) => <div><img src={icon} alt="ici" width="30" heigth="40"/></div>;
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -35,8 +36,8 @@ class SimpleMap extends Component {
             text={'Bxll'}
           />
           <Marker
-            lat={this.state.lat}
-            lng={this.state.lng}
+            lat={this.state.location.lat}
+            lng={this.state.location.lng}
             text={'Hello World!'}
           />
         </GoogleMapReact>
