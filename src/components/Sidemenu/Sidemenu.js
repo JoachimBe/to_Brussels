@@ -36,7 +36,6 @@ class SideMenu extends React.Component {
         <div className="scroll">
         <div className="container">
         <img className="image-1" src="https://i.goopics.net/2GKx8.png" alt="logo"></img>
-
         <ul className="liste-entiere">
             <li className={"liste museums" + (this.state.places.museums ? " active" : "")}   onClick={() => this.selectPlace('museums')}>MUSEUMS<img src="https://i.goopics.net/g3aly.png" className="logo-museum" alt="museum"></img></li>
             <li className={"liste monument" + (this.state.places.monument ? " active" : "")}   onClick={() => this.selectPlace('monument')}>MONUMENTS<img src="https://i.goopics.net/eVkej.png" className="logo-monument" alt="monument"></img></li>
