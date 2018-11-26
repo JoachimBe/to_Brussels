@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SideMenu from "./components/Sidemenu/Sidemenu.js";
-import Backdrop from "./components/backdrop/backdrop.js";
 class App extends Component {
   constructor (props){
     super(props);
@@ -11,7 +10,6 @@ class App extends Component {
   }
 
   handleChange(data){
-console.log(data);
     this.setState({
       places:data
     })
@@ -23,18 +21,9 @@ console.log(data);
     });
   };
 
-  backdropClickHandler = () => {
-    this.setState({sideMenuOpen:false})
-  };
-
-
   render() {
     
-    let backdrop;
-
-    if(this.state.sideMenuOpen){      
-      backdrop= <Backdrop click={this.backdropClickHandler}/>;
-    }
+    
     return (
       <div>
         <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />

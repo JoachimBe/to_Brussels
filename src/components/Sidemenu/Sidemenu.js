@@ -27,15 +27,16 @@ class SideMenu extends React.Component {
         this.setState({
             places : previousState
         })
-        console.log(this.state.places)
     }
     render (){
     return ( 
     <nav className={this.props.show ? "side-menu open" : "side-menu"}>
     
         <MenuToggleButton click={this.props.menuClickHandler}/>
-     
-    <div className="scroll">
+        <div className="scroll">
+        <div className="container">
+        <img className="image-1" src="https://i.goopics.net/2GKx8.png" alt="logo"></img>
+
         <ul className="liste-entiere">
             <li className={"liste museums" + (this.state.places.museums ? " active" : "")}   onClick={() => this.selectPlace('museums')}>MUSEUMS<img src="https://i.goopics.net/g3aly.png" className="logo-museum" alt="museum"></img></li>
             <li className={"liste monument" + (this.state.places.monument ? " active" : "")}   onClick={() => this.selectPlace('monument')}>MONUMENTS<img src="https://i.goopics.net/eVkej.png" className="logo-monument" alt="monument"></img></li>
@@ -47,6 +48,7 @@ class SideMenu extends React.Component {
                 <button href="#" className="button bouton-text" onClick={this.props.menuClickHandler}>Go to Map</button>
             </div>
         </ul>
+    </div>
     </div>
     </nav>
     )}

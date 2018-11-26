@@ -2,7 +2,7 @@
 
 .side-menu {
     height: calc(100vh - 56px) ;
-    background: #3e6f77;
+    background: #00648B;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 56px;
@@ -20,10 +20,19 @@
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
+
 .scroll {
     height: calc(100vh - 56px) ;
     overflow-y: scroll;
     box-sizing: border-box;
+}
+
+.image-1{
+    margin-top:20px;
+    width:85px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 /* liste*/
@@ -55,7 +64,6 @@
 
 .logo-museum {
     height: 20px;
-    left: 75px;
 }
 
 .logo-comics {
@@ -65,38 +73,21 @@
 
 .logo-monument {
     height: 27px;
-    left: 50px;
 }
 
 .logo-streetart {
     height: 27px;
-    left: 64px;
 }
 
 .logo-memorial {
     height: 27px;
-    left: 63px;
 }
 
-.logo-basics {
-    height: 25px;
-    left: 100px;
-}
 
 /*liste section*/
 
-.basic:hover {
-    background-color: #5e888f;
-    color: white;
-}
-
-.basic:active {
-    background-color: #d4666c;
-    color: white;
-}
-
 .museums:hover {
-    background-color: #5e888f;
+    background-color: rgba(154, 204, 212, 0.3);
     color: white;
 }
 
@@ -106,7 +97,7 @@
 }
 
 .monument:hover {
-    background-color: #5e888f;
+    background-color: rgba(154, 204, 212, 0.3);
     color: white;
 }
 
@@ -116,7 +107,7 @@
 }
 
 .comics:hover {
-    background-color: #5e888f;
+    background-color: rgba(154, 204, 212, 0.3);
     color: white;
 }
 
@@ -126,7 +117,7 @@
 }
 
 .streetart:hover {
-    background-color: #5e888f;
+    background-color: rgba(154, 204, 212, 0.3);
     color: white;
 }
 
@@ -136,7 +127,7 @@
 }
 
 .memorial:hover {
-    background-color: #5e888f;
+    background-color: rgba(154, 204, 212, 0.3);
     color: white;
 }
 
@@ -155,7 +146,7 @@
     background-color: transparent;
     color: white;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     max-width: 140px;
     text-transform: uppercase;
@@ -168,7 +159,7 @@
     padding: 10px 0;
     text-align: center;
     border: 1px solid white;
-    border-radius: 5px;
+    border-radius: 30px;
     box-sizing: border-box;
 
 }
