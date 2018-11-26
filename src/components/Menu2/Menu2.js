@@ -17,7 +17,10 @@ class Menu2 extends React.Component{
         
         return(
             <div className="sideBar">
-            <p className="welcome">Welcome, Adventurer<p className="welcome-text">Here begins your journey through Brussels' wonders ! You can either choose a fixed distance that will take you over a loop course, or enter a destination adress, if you already know where to go ;-)</p> </p>
+                        <img className="logo-dessus" src="https://i.goopics.net/2GKx8.png" alt="logo"></img>
+
+            <div className="contenu">
+            <p className="welcome">To Brussels<p className="welcome-text">You can either choose a fixed distance that will take you over a loop course, or enter a destination adress, if you already know where to go ;-)</p> </p>
                 <form action="" method="">
                 <p className="typeParcour" onClick={ev => this.showKilom()}>How big is your will to visit ?</p>
                     <ul name="listK" className={this.state.display}>
@@ -26,12 +29,13 @@ class Menu2 extends React.Component{
                         <li><input className="choix-km" type="radio" name="kilometers" value="20"></input><label className="choix-km" for='15'>15 Km</label></li>
                         <li><input className="choix-km" type="radio" name="kilometers" value="15"></input><label className="choix-km" for='20'>20 Km</label></li>
                     </ul>
-                    <label className="typeParcour lab4input" for='adress'>Or enter your final destination:</label>
+                    <label className="typeParcour lab4input" for='adress'>Your final destination:</label>
                     <input className="adress" type="text" name="adress" required size="22" onClick={ev => this.hideKiloM()}/>
                     
                     <input type="submit" className="buttonTwo" value="Go to map"/>
-                </form>
+                </form> 
                 <a className="back" href="#"><img className="back" src="https://i.goopics.net/NNmvW.png" alt="back"></img></a>
+                </div>
             </div>
         );
     }

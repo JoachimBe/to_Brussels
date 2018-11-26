@@ -4,49 +4,88 @@
     font-family: sans-serif;
     }
     
+    @font-face {
+        font-family: 'Coyote-SemiBoldDEMO';
+        src: url('Coyote-SemiBoldDEMO.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'LANENAR';
+        src: url('LANENAR.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    
+
+
     .sideBar{
     position:fixed;
     left:0;
-    top:56px;
+    top:0;  
     margin:0;
-    width:220px;
+    width:250px;
     height:100%;
-    background:#335c62; 
+    background:#00648b; 
     flex-direction:column;
     }
+    .contenu{
+        position:absolute;
+        top:130px;
+    }
+    .logo-dessus{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:15px;
+
+        width:120px;
+    }
     .typeParcour{
-        font-size: 22px;
+        font-size: 15px;
         color:white;
         max-width:80%;
         padding: 0;
         text-align: center;
-        border-top: 1px solid White;
-        border-bottom: 1px solid White;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         margin:22px;
         margin-bottom:10px;
         margin-top:10px;
+        font-family: 'Coyote-SemiBoldDEMO';
+        font-weight: 200;
     }
     .welcome{
         color:white;
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
-        text-transform: uppercase;
+        word-spacing: 5px;
+        font-family: 'Coyote-SemiBoldDEMO';
     }
     .welcome-text{
+        background:none;
+        display:flex;
+        justify-content: center;
         font-size: 15px;
+        width: 220px;
+        margin:7px;
+        padding:7px;
+        font-family: 'LANENAR';
+        text-align: justify;
+        font-weight:600;
         border: 1px solid white;
-        text-transform: none;
-        max-width: 200px;
-        margin:10px;
-        padding:8px;
-    }
+       }
     .adress{
-        margin:7%;
+        margin:12%;
         margin-top:0;
     }
     .choix-km{
         color:white;
         padding: 0 20px;
+        font-family: 'LANENAR';
+        font-weight: 600;
+        font-size: 14px;
     }
     
     li{
@@ -79,20 +118,24 @@
     /* boutons */
     
     .buttonTwo{
-    font-family: sans-serif;
-    padding:20px 10px;
-    outline: none;
-    background-color: #578A90;
-    border: none;
-    border-radius:10px;
-    color:white;
-    font-size:18px;
-    display: block;
-    margin: auto;
+        position:relative;
+        left:60px;
+        width:130px;
+        background:none;
+        text-decoration: none;
+        padding: 15px 5px;
+        font-family: arial;
+        letter-spacing: 2px;
+        background-color:none;
+        border: 2px solid white;
+        color:white;
+        border-radius: 50px;
+        font-size: 18px;
     }
     .buttonTwo:hover{
-    background-color:#49757c;
-    color:white;
+        border: 2px solid #2DB5C3;
+        color:#2DB5C3;
+        cursor:pointer;
 
     }
 
