@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SideMenu from "./components/Sidemenu/Sidemenu.js";
-import Backdrop from "./components/backdrop/backdrop.js";
+import Legal from './components/Legal/index.js'
+import Footer from './components/Footer/index.js'
 class App extends Component {
   constructor (props){
     super(props);
@@ -38,6 +39,9 @@ console.log(data);
     return (
       <div>
         <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />
+      <div className="App">
+        <Legal/>
+        <Footer/>
       </div>
     );
   }
