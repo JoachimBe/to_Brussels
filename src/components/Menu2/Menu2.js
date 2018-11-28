@@ -18,7 +18,7 @@ class Menu2 extends React.Component{
         const visible = this.state.visible;
         
         return(
-            <div  className={this.props.show ? "side-menu.open" : "sideBar"}>
+            <div  className={this.props.show ? "sideBar open" : "sideBar"}>
                     <MenuToggleButton click={this.props.menuClickHandler}/>
 
                         <img className="logo-dessus" src="https://i.goopics.net/2GKx8.png" alt="logo"></img>
