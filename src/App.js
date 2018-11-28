@@ -13,7 +13,6 @@ class App extends Component {
   }
 
   handlePlacesChoice(data){
-    console.log('data', data)
     this.setState({
       places : data
     })
