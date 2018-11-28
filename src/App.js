@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import SimpleMap from './components/Map/Map';
 
-import Legal from './components/Legal/index.js'
+import Legal from './components/legal/index.js'
 import './App.css';
-import Footer from './components/Footer/index.js'
+import Footer from './components/footer/index.js'
 
 
 class App extends Component {
