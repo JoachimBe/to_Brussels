@@ -1,65 +1,165 @@
-* {
-    margin:0px;
-    padding:0px;
-    font-family: sans-serif;
-    }
-    
-    .sideBar{
-    position:fixed;
-    width:200px;
-    height:100%;
-    background:#335c62; 
-    flex-direction:column;
-    }
-    .typeParcour{
-        font-size: 1.5em;
-    }
-    
-    /*hamburger menu*/
-    
-    .sidebar .toggle-btn{
+@font-face {
+    font-family: 'Coyote-SemiBoldDEMO';
+    src: url('Coyote-SemiBoldDEMO.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LANENAR';
+    src: url('LANENAR.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.sideBar{
+position:fixed;
+left:0;
+top:0;  
+margin:0;
+width:70%;
+max-width:205px;
+height:100%;
+background:#00648b; 
+flex-direction:column;
+
+}
+.contenu{
     position:absolute;
-    left:220px;
-    top:15px;
-    }
-    
-    .sidebar .toggle-btn span{
+    top:100px;
+}
+.side-menu.open {
+    transform: translateX(0);
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo-dessus{
     display:block;
-    width:30px;
-    height:5px;
-    background: black;
-    margin:3px 0px;
-    }
-    
-    /* boutons */
-    
-    .buttonTwo{
-    font-family: sans-serif;
-    padding:20px 10px;
-    outline: none;
-    background-color: #578A90;
-    border: none;
-    border-radius:10px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:15px;
+
+    width:80px;
+}
+.form{
+    width:180px;
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+}
+.typeParcour{
+    font-size: 15px;
     color:white;
-    font-size:18px;
+    padding: 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom:10px;
+    margin-top:10px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.welcome{
+    color:white;
+    font-size: 20px;
+    text-align: center;
+    word-spacing: 5px;
+    font-family: 'Coyote-SemiBoldDEMO';
+    width:200px;
+    margin:0;
+}
+.welcome-text{
+    background:none;
+    display:flex;
+    justify-content: center;
+    font-size: 15px;
+    width: 175px;
+    margin-right:auto;
+    margin-left: auto;
+    margin-bottom:0;
+    padding:7px;
+    font-family: none;
+    text-align: justify;
+    border: 1px solid white;
+   }
+.adress{
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+}
+.choix-km{
+    color:white;
+    font-family: 'LANENAR';
+    font-weight: 600;
+    font-size: 12px;
+}
+
+li{
+    padding:2px;
+    width:100px;
+}
+ul{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0;
+    list-style: none;
+    margin: 0 62px;
+}
+.back{
+    width:40px;
+}
+/*hamburger menu*/
+
+.sidebar .toggle-btn{
+position:absolute;
+left:220px;
+top:15px;
+}
+
+.sidebar .toggle-btn span{
+display:block;
+width:30px;
+height:5px;
+background: black;
+margin:3px 0px;
+}
+
+/* boutons */
+
+.buttonTwo{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    width:130px;
+    background:none;
+    text-decoration: none;
+    padding: 7px 5px;
+    font-family: arial;
+    letter-spacing: 2px;
+    background-color:none;
+    border: 2px solid white;
+    color:white;
+    border-radius: 50px;
+    font-size: 18px;
+}
+.buttonTwo:hover{
+    border: 2px solid #2DB5C3;
+    color:#2DB5C3;
+    cursor:pointer;
+
+}
+
+/*LABEL*/
+.lab4input{
     display: block;
-    margin: auto;
-    }
-    .buttonTwo:hover{
-    background-color:#49757c;
-    color:white;
-    
-    }
+}
 
-    /*LABEL*/
-    .lab4input{
-        display: block;
-    }
+.hidden{
+    display: none;
+}
 
-    .hidden{
-        display: none;
-    }
-
-    .show{
-        display: inline;
-    }
+.show{
+    display: inline;
+}
