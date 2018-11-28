@@ -1,0 +1,180 @@
+/*side menu*/
+
+.side-menu {
+    height: calc(100vh - 56px) ;
+    background: #00648B;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 70%;
+    max-width: 205px;
+    z-index: 200;
+    transform: translateX(-160px);
+    transition: transform 0.5s ease-out;
+    padding: 0;
+}
+
+.side-menu.open {
+    transform: translateX(0);
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.scroll {
+    height: calc(100vh - 56px) ;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.image-1{
+    margin-top:20px;
+    width:85px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* liste*/
+
+.liste-entiere {
+    height: calc(100vh - 56px) ;
+    box-sizing: border-box;    
+    margin: 20px 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.liste {
+    color: white;
+    list-style: none;
+    padding: 10px 12px 10px 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10px;
+}
+
+/*logos*/
+
+.logo-museum {
+    height: 20px;
+}
+
+.logo-comics {
+    height: 27px;
+    left: 95px;
+}
+
+.logo-monument {
+    height: 27px;
+}
+
+.logo-streetart {
+    height: 27px;
+}
+
+.logo-memorial {
+    height: 27px;
+}
+
+
+/*liste section*/
+
+.museums:hover {
+    background-color: rgba(154, 204, 212, 0.3);
+    color: white;
+}
+
+.museums.active {
+    background-color: #F7567C;
+    color: white;
+}
+
+.monument:hover {
+    background-color: rgba(154, 204, 212, 0.3);
+    color: white;
+}
+
+.monument.active {
+    background-color: #C04ABC;
+    color: white;
+}
+
+.comics:hover {
+    background-color: rgba(154, 204, 212, 0.3);
+    color: white;
+}
+
+.comics.active {
+    background-color: #65c0bc;
+    color: white;
+}
+
+.streetart:hover {
+    background-color: rgba(154, 204, 212, 0.3);
+    color: white;
+}
+
+.streetart.active {
+    background-color:#43B929;
+    color: white;
+}
+
+.memorial:hover {
+    background-color: rgba(154, 204, 212, 0.3);
+    color: white;
+}
+
+.memorial.active {
+    background-color: rgb(252, 188, 71);
+    color: white;
+}
+
+/* buttons */
+
+.boutons{
+    padding: 0 10px 10px 10px;
+    box-sizing: border-box;
+}
+.button {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    max-width: 140px;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+}
+
+.bouton-text {
+    margin: 10px 0;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 30px;
+    box-sizing: border-box;
+
+}
+
+.bouton-text:hover {
+    background: #72a5ad;
+    color: white;
+    transition: all 280ms ease-in-out;
+    letter-spacing: 1px;
+}
+
+.bouton-text:active {
+    background: white;
+    color: #5e888f;
+    transition: all 280ms ease-in-out;
+    letter-spacing: 1px;
+}
+

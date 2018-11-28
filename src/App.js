@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import SideMenu from "./components/Sidemenu/Sidemenu.js";
-import Backdrop from "./components/backdrop/backdrop.js";
+import Legal from './components/Legal/index.js';
+import Footer from './components/Footer/index.js';
+import Menu2 from './components/Menu2/Menu2.js';
+import Toolbar from './components/Toolbar/Toolbar.js';
+
+
 class App extends Component {
   constructor (props){
     super(props);
@@ -11,7 +16,6 @@ class App extends Component {
   }
 
   handleChange(data){
-console.log(data);
     this.setState({
       places:data
     })
@@ -23,21 +27,16 @@ console.log(data);
     });
   };
 
-  backdropClickHandler = () => {
-    this.setState({sideMenuOpen:false})
-  };
-
-
   render() {
     
-    let backdrop;
-
-    if(this.state.sideMenuOpen){      
-      backdrop= <Backdrop click={this.backdropClickHandler}/>;
-    }
+    
     return (
       <div>
-        <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />
+        <Toolbar/>
+<Menu2/>      <div className="App">
+        <Legal/>
+        <Footer/>
+      </div>
       </div>
     );
   }

@@ -1,5 +1,7 @@
 import React from'react';
 import './main.css';
+import MenuToggleButton from "../ToggleButton/MenuToggleButton.js";
+
 import ReactDOM from 'react-dom';
 
 
@@ -16,12 +18,14 @@ class Menu2 extends React.Component{
         const visible = this.state.visible;
         
         return(
-            <div className="sideBar">
+            <div  className={this.props.show ? "side-menu.open" : "sideBar"}>
+                    <MenuToggleButton click={this.props.menuClickHandler}/>
+
                         <img className="logo-dessus" src="https://i.goopics.net/2GKx8.png" alt="logo"></img>
 
             <div className="contenu">
             <p className="welcome">To Brussels<p className="welcome-text">You can either choose a fixed distance that will take you over a loop course, or enter a destination adress, if you already know where to go ;-)</p> </p>
-                <form action="" method="">
+                <form className="form" action="" method="">
                 <p className="typeParcour" onClick={ev => this.showKilom()}>How big is your will to visit ?</p>
                     <ul name="listK" className={this.state.display}>
                         <li><input className="choix-km" type="radio" name="kilometers" value="5"></input><label className="choix-km" for='5'>5 Km</label></li>

@@ -1,9 +1,4 @@
-* {
-    margin:0px;
-    padding:0px;
-    font-family: sans-serif;
-    }
-    
+
     @font-face {
         font-family: 'Coyote-SemiBoldDEMO';
         src: url('Coyote-SemiBoldDEMO.ttf');
@@ -18,74 +13,86 @@
     }
 
     
-
-
     .sideBar{
     position:fixed;
     left:0;
     top:0;  
     margin:0;
-    width:250px;
+    width:70%;
+    max-width:205px;
     height:100%;
     background:#00648b; 
     flex-direction:column;
+
     }
     .contenu{
         position:absolute;
-        top:130px;
+        top:100px;
     }
+    .side-menu.open {
+        transform: translateX(0);
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+    
     .logo-dessus{
         display:block;
         margin-left:auto;
         margin-right:auto;
         margin-top:15px;
 
-        width:120px;
+        width:80px;
+    }
+    .form{
+        width:180px;
+        display:block;
+        margin-right:auto;
+        margin-left:auto;
     }
     .typeParcour{
         font-size: 15px;
         color:white;
-        max-width:80%;
         padding: 0;
         text-align: center;
         border-top: 1px solid rgba(255, 255, 255, 0.3);
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        margin:22px;
         margin-bottom:10px;
         margin-top:10px;
-        font-family: 'Coyote-SemiBoldDEMO';
         font-weight: 200;
+        text-transform: uppercase;
     }
     .welcome{
         color:white;
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
         word-spacing: 5px;
         font-family: 'Coyote-SemiBoldDEMO';
+        width:200px;
+        margin:0;
     }
     .welcome-text{
         background:none;
         display:flex;
         justify-content: center;
         font-size: 15px;
-        width: 220px;
-        margin:7px;
+        width: 175px;
+        margin-right:auto;
+        margin-left: auto;
+        margin-bottom:0;
         padding:7px;
-        font-family: 'LANENAR';
+        font-family: none;
         text-align: justify;
-        font-weight:600;
         border: 1px solid white;
        }
     .adress{
-        margin:12%;
-        margin-top:0;
+        display:block;
+        margin-right:auto;
+        margin-left:auto;
     }
     .choix-km{
         color:white;
-        padding: 0 20px;
         font-family: 'LANENAR';
         font-weight: 600;
-        font-size: 14px;
+        font-size: 12px;
     }
     
     li{
@@ -93,6 +100,10 @@
         width:100px;
     }
     ul{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        padding:0;
         list-style: none;
         margin: 0 62px;
     }
@@ -118,12 +129,14 @@
     /* boutons */
     
     .buttonTwo{
-        position:relative;
-        left:60px;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:20px;
         width:130px;
         background:none;
         text-decoration: none;
-        padding: 15px 5px;
+        padding: 7px 5px;
         font-family: arial;
         letter-spacing: 2px;
         background-color:none;

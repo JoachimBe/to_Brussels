@@ -1,7 +1,7 @@
 import React from 'react';
+import Menu2 from "../Menu2/Menu2.js";
 import Footer from '../footer/index.js';
 import Legal from '../legal/index.js';
-import SideMenu from '../Sidemenu/Sidemenu.js';
 
 class Integration extends React.Component {
   
@@ -10,7 +10,7 @@ class Integration extends React.Component {
     
     return (
       <div>
-        <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />
+        <Menu2/>
         <Legal/>
         <Footer/>
       </div>
