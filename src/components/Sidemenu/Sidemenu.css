@@ -7,7 +7,7 @@
     position: fixed;
     top: 56px;
     left: 0;
-    width: 70%;
+    width: 205px;
     max-width: 205px;
     z-index: 200;
     transform: translateX(-160px);
@@ -141,6 +141,7 @@
 .boutons{
     padding: 0 10px 10px 10px;
     box-sizing: border-box;
+    margin-top:20px;
 }
 .button {
     background-color: transparent;
@@ -156,11 +157,16 @@
 
 .bouton-text {
     margin: 10px 0;
-    padding: 10px 0;
+    padding: 10px 20px;
     text-align: center;
     border: 1px solid white;
     border-radius: 30px;
     box-sizing: border-box;
+    text-decoration: none;
+    margin-top:20px;
+    width:100%;
+    display:flex;
+    
 
 }
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import './main.css';
 import MenuToggleButton from "../ToggleButton/MenuToggleButton.js";
+import {NavLink} from "react-router-dom";
+
 
 import ReactDOM from 'react-dom';
 
@@ -38,7 +40,7 @@ class Menu2 extends React.Component {
 
                         <input type="submit" className="buttonTwo" value="Go to map" />
                     </form>
-                    <a className="back" href="#"><img className="back" src="https://i.goopics.net/NNmvW.png" alt="back"></img></a>
+                    <NavLink to="/" className="back" ><img className="back" src="https://i.goopics.net/NNmvW.png" alt="back"></img></NavLink>
                 </div>
             </nav>
         );

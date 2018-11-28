@@ -4,6 +4,9 @@ import MenuToggleButton from "../ToggleButton/MenuToggleButton.js";
 
 import './Sidemenu.css';
 
+import {NavLink} from "react-router-dom";
+
+
 class SideMenu extends React.Component {
     constructor (props){
         super(props);
@@ -43,7 +46,7 @@ class SideMenu extends React.Component {
             <li className={"liste streetart" + (this.state.places.streetart ? " active" : "")} onClick={() => this.selectPlace('streetart')}>STREET ART<img src="https://i.goopics.net/EdqX5.png" className="logo-streetart" alt="streetart"></img></li>
             <li className={"liste memorial" + (this.state.places.memorials ? " active" : "")} onClick={() => this.selectPlace('memorials')}>MEMORIALS<img src="https://i.goopics.net/O3q2Q.png" className="logo-memorial" alt="memorial"></img></li>
             <div className="boutons">
-                <button href="#" className="button bouton-text" onClick = {this.handleChange}>Generate a course</button>
+                <NavLink to ="/generate-course" className="button bouton-text" onClick = {this.handleChange}>Generate a course</NavLink>
                 <button href="#" className="button bouton-text" onClick={this.props.menuClickHandler}>Go to Map</button>
             </div>
         </ul>
