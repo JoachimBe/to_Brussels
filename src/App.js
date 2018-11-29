@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
-import SimpleMap from './components/Map/Map';
-
-import Legal from './components/legal/index.js'
-import './App.css';
-import Footer from './components/footer/index.js'
-
+import Map from './components/Map/Map'
 
 class App extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = {
+      places : {}
+    }
+  }
+
+  
   render() {
     return (
-      
-      <div className="App">
-        <SimpleMap/>
-        <Legal/>
-        <Footer/>
+      <div>
+        <Map/>
       </div>
     );
   }
 }
+
 
 export default App;
