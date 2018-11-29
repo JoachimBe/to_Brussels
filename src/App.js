@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { DataProvider } from './ContextAPI/Context';
+import { DataProvider } from './components/ContextAPI/Context';
 import Test from './components/Test/index';
 
 class App extends Component {
@@ -20,13 +20,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <DataProvider value={this.state.places} >
           <Test callback={(data) => this.handlePlacesChoice(data)} />
         </DataProvider>
+
       </div>
     );
   }
 }
 
+
 export default App;
- 
