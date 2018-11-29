@@ -20,13 +20,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <DataProvider value={this.state.places} >
           <Test callback={(data) => this.handlePlacesChoice(data)} />
         </DataProvider>
+
       </div>
     );
   }
 }
 
+
 export default App;
- 
