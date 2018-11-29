@@ -141,7 +141,6 @@
 .boutons{
     padding: 0 10px 10px 10px;
     box-sizing: border-box;
-    margin-top:20px;
 }
 .button {
     background-color: transparent;
@@ -156,23 +155,22 @@
 }
 
 .bouton-text {
-    margin: 10px 0;
+    margin: 10px 0px;
     padding: 10px 20px;
     text-align: center;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 30px;
     box-sizing: border-box;
     text-decoration: none;
-    margin-top:20px;
     width:100%;
     display:flex;
-    
-
+    justify-content: center;
+    font-family: sans-serif;
 }
 
 .bouton-text:hover {
-    background: #72a5ad;
-    color: white;
+    border: 2px solid #2DB5C3;
+    color:#2DB5C3;
     transition: all 280ms ease-in-out;
     letter-spacing: 1px;
 }

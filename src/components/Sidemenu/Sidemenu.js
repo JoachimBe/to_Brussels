@@ -6,6 +6,8 @@ import './Sidemenu.css';
 
 import {NavLink} from "react-router-dom";
 
+import Toolbar from '../Toolbar/Toolbar.js';
+
 
 class SideMenu extends React.Component {
     constructor (props){
@@ -33,6 +35,8 @@ class SideMenu extends React.Component {
     }
     render (){
     return ( 
+        <div>
+        <Toolbar />
     <nav className={this.props.show ? "side-menu open" : "side-menu"}>
     
         <MenuToggleButton click={this.props.menuClickHandler}/>
@@ -53,6 +57,7 @@ class SideMenu extends React.Component {
     </div>
     </div>
     </nav>
+    </div>
     )}
 }
 
