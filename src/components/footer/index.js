@@ -4,7 +4,7 @@ import './index.css';
 class Footer extends React.Component{
     render() {
       return (
-            <footer>
+            <footer className="footer">
                 <ul class="footer-list">
                     <li className="liste-footer"><a className="footer-link" href="">Legal</a></li>
                     <li className="liste-footer"><a className="footer-link" href="">About us</a></li>
