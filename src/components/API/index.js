@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './index.css';
-import Pins from '../Pins/index';
 
 let count = 0;
 const locationName = ['museums+in+brussels', 'monuments+in+brussels', 'street+art+in+brussels', 'parcours+BD+bruxelles']
@@ -9,8 +8,7 @@ class DisplayApi extends Component {
     super(props);
     this.state = {
       places: {
-        museums: true,
-        monuments: false
+      
       },
       location: [],
       user: {
