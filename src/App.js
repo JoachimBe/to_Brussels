@@ -1,46 +1,39 @@
 import React, { Component } from 'react';
-import SideMenu from "./components/Sidemenu/Sidemenu.js";
-import Backdrop from "./components/backdrop/backdrop.js";
+import './App.css';
+import Menu2 from './components/Menu2/Menu2'
+import { Route, BrowserRouter, Switch} from 'react-router-dom';
+
 class App extends Component {
-  constructor (props){
-    super(props);
+
+  constructor(props){
+    super(props)
     this.state = {
-      sideMenuOpen: false,
-      places : {}
-    };
+      places : {},
+      kilometres: 0,
+      destination: {
+          adress: ''
+      }
+  }
   }
 
-  handleChange(data){
-console.log(data);
+  setMenu2(data){
     this.setState({
-      places:data
+      kilometres: data.kilometres,
+      adress: data.adress
     })
+    console.log(this.state)
   }
-
-  menuToggleClickHandler = () =>{
-    this.setState((prevState)=>{
-      return {sideMenuOpen:!prevState.sideMenuOpen};
-    });
-  };
-
-  backdropClickHandler = () => {
-    this.setState({sideMenuOpen:false})
-  };
-
-
+  
   render() {
-    
-    let backdrop;
-
-    if(this.state.sideMenuOpen){      
-      backdrop= <Backdrop click={this.backdropClickHandler}/>;
-    }
     return (
-      <div>
-        <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" render={() => <Menu2 valMenu2={(datam2)=>this.setMenu2(datam2)} />} />
+        </Switch>
+        </BrowserRouter>  
     );
   }
+
 }
 
 export default App;
