@@ -1,11 +1,37 @@
 import React from "react";
 import './index.css';
+import Toolbar from '../Toolbar/Toolbar.js'
+import SideMenu from "../Sidemenu/Sidemenu";
+import Footer from "../Footer/index.js";
+
+import { NavLink } from "react-router-dom";
+
+
+
 
 class Legal extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+          sideMenuOpen: false,
+        };
+      }
+
+    menuToggleClickHandler = () => {
+        this.setState((prevState) => {
+          return { sideMenuOpen: !prevState.sideMenuOpen };
+        });
+      };
+    
     render() {
       return (
+          
           <div>
-          <h1>Legal Notice</h1>
+              <Toolbar/>
+              <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />        
+              <div>
+              <NavLink to='/map'><img src="https://i.goopics.net/YkyvR.png" alt="back" className="image-back"></img></NavLink>
+              <h1>Legal Notice</h1>
             <h2>Terms Of Use</h2>
             <h3>AGREEMENT BETWEEN USER AND TO BRUSSELS</h3>
                 <p>The To Brussels Web Site is comprised of various Web pages operated by To Burssels.</p>
@@ -50,7 +76,10 @@ class Legal extends React.Component{
                 <p>The names of actual companies and products mentioned herein may be the trademarks of their respective owners.</p>
                 <p>The example companies, organizations, products, people and events depicted herein are fictitious. No association with any real company, organization, product, person, or event is intended or should be inferred.</p>
                 <p>Any rights not expressly granted herein are reserved.</p>
+                </div>  
+         <Footer/>
           </div>
+
       );
     }
 }

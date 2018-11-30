@@ -1,6 +1,6 @@
 
 .footer{
-	background: rgba(224, 221, 221,0.5);
+	background: rgba(224, 221, 221,0.7);
 	padding: 5px;
 	width:100%;
 	z-index: -1;
@@ -19,7 +19,7 @@
 .footer-link{
 	text-align: center;
 	margin: 0;
-	padding:7px;
+	margin-top:7px;
 	margin-right:0;
 	display: block;
 	width:100%;
