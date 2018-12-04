@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './index.css';
 
 let count = 0;
 const locationName = ['museums+in+brussels', 'monuments+in+brussels', 'memorials+in+brussels', 'street+art+in+brussels', 'parcours+BD+bruxelles']
@@ -8,14 +7,14 @@ class DisplayApi extends Component {
     super(props);
     this.state = {
       places: {
+        museums:true,
+        monuments:true
       },
       location: [],
-      mapLocation: [],
       user: {
         "lat": 50.8503,
         "lng": 4.3517
-      },
-      isReady: false
+      }
     }
   };
 
@@ -23,17 +22,6 @@ class DisplayApi extends Component {
     this.setState({
       places: event.target.value,
     });
-  }
-
-  getLocation(){
-    let direction = this.state.location.map((elem, index) => {
-      return elem.geometry.location
-    }) 
-    this.setState({mapLocation: direction})
-  }
-
-  monteApi(){
-    this.props.handleApi(mapLocation)
   }
 
   callPlaceApi(type) {
@@ -45,9 +33,8 @@ class DisplayApi extends Component {
       })
       .then(response => response.json())
       .then(data => {
-
         this.setState(prevState => ({
-          location: [...prevState.location, ...data.results]
+          location: [...prevState.location, [...data.results]]
         }));
       });
   }
@@ -59,15 +46,11 @@ class DisplayApi extends Component {
       }
       count++
     }
-    this.setState({
-      isReady : true
-    })
-    monteApi
   }
 
   componentDidUpdate(prevProps, prevState){
     if(prevState.location !== this.state.location){
-      this.getLocation()
+      this.props.handleApi(this.state.location)
     }
   }
 
