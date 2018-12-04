@@ -21,7 +21,6 @@ class App extends Component {
       kilometres: data.kilometres,
       adress: data.adress
     })
-    console.log(this.state)
   }
   
   render() {
