@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 let count = 0;
-const locationName = ['museums+in+brussels', 'monuments+in+brussels', 'memorials+in+brussels', 'street+art+in+brussels', 'parcours+BD+bruxelles']
+const locationName = ['museums+in+brussels', 'monuments+in+brussels', 'parcours+BD+bruxelles', 'street+art+in+brussels', 'memorials+in+brussels']
 class DisplayApi extends Component {
   constructor(props) {
     super(props);
