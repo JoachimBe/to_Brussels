@@ -3,6 +3,8 @@ import SideMenu from "./components/Sidemenu/Sidemenu.js";
 import Footer from './components/Footer/index.js';
 import Menu2 from './components/Menu2/Menu2.js';
 import Home from './components/Home/home.js';
+import Legal from './components/Legal/index.js';
+import AboutUs from './components/about-us/index.js'
 
 import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
 
@@ -43,6 +45,11 @@ class App extends Component {
 } />
             <Route path="/generate-course" render={() => <Menu2 show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />
 } />
+
+            <Route  path="/legal" component={Legal} />
+            <Route  path="/about" component={AboutUs} />
+
+
           </Switch>
           <div className="App">
             <Footer />
