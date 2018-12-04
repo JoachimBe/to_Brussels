@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import './index.css';
 
 let count = 0;
-const locationName = ['museums+in+brussels', 'monuments+in+brussels', 'street+art+in+brussels', 'parcours+BD+bruxelles']
+const locationName = ['museums+in+brussels', 'monuments+in+brussels', 'memorials+in+brussels', 'street+art+in+brussels', 'parcours+BD+bruxelles']
 class DisplayApi extends Component {
   constructor(props) {
     super(props);
     this.state = {
       places: {
-      museum:true,
-      monuments:true
       },
       location: [],
       mapLocation: [],
@@ -34,6 +32,9 @@ class DisplayApi extends Component {
     this.setState({mapLocation: direction})
   }
 
+  monteApi(){
+    this.props.handleApi(mapLocation)
+  }
 
   callPlaceApi(type) {
     fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${type}&location=${this.state.user.lat},${this.state.user.lng}&radius=${this.state.userdistance}&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`
@@ -61,6 +62,7 @@ class DisplayApi extends Component {
     this.setState({
       isReady : true
     })
+    monteApi
   }
 
   componentDidUpdate(prevProps, prevState){
