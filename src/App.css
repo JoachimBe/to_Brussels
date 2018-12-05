@@ -1,4 +1,13 @@
 
 body{
-    margin: 0;
+    text-align: justify;
+    margin: 1em;
+    width:93%;
+    position:absolute;
+    top:40px;
+    left:5%;
+}
+
+.app{
+    margin-bottom: 30px;
 }

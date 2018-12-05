@@ -1,10 +1,7 @@
 import React from 'react';
 import './main.css';
 import MenuToggleButton from "../ToggleButton/MenuToggleButton.js";
-
 import { NavLink } from "react-router-dom";
-
-
 
 class Menu2 extends React.Component {
     constructor(props) {
@@ -18,7 +15,6 @@ class Menu2 extends React.Component {
                 adress: ''
             }
         };
-        this.onChange = this.onChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
     }
 
@@ -30,6 +26,7 @@ class Menu2 extends React.Component {
     render(){
         const visible = this.state.visible;
         return(
+            <nav className={this.props.show ? "sideBar open" : "sideBar"}>
             <div  className={this.props.show ? "side-menu.open" : "sideBar"}>
                     <MenuToggleButton click={this.props.menuClickHandler}/>
 
@@ -53,6 +50,7 @@ class Menu2 extends React.Component {
                 <a className="back" href="#"><img className="back" src="https://i.goopics.net/NNmvW.png" alt="back"></img></a>
                 </div>
             </div>
+            </nav>
         );
     }
 
@@ -92,6 +90,7 @@ class Menu2 extends React.Component {
     handleHideClick() {
         this.setState({ visible: false });
     }
+
     submitForm(e){
         e.preventDefault();
     }
