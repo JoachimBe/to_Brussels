@@ -6,8 +6,10 @@ import Pin2 from './memorial.png';
 import Pin3 from './monument.png';
 import Pin4 from './museum.png';
 import Pin5 from './streetArt.png';
+// import Api from './index'
+//import { Route, BrowserRouter, Switch} from 'react-router-dom';
 
-const valeurLocation = [
+let valeurLocation = [
   {
     location:{
     lat: 50.833343, 
@@ -42,7 +44,7 @@ const valeurLocation = [
       lng:4.311616
       }
   }
-]
+];
 const Marker = ({ img }) => <div><img src={icon} alt="ici" width="30" heigth="40"/></div>;
 
 const MarkerComics = ({ img }) => <div><img src={Pin1} alt="pinComics" width="30" heigth="40"/></div>;
@@ -51,7 +53,6 @@ const MarkerMonument = ({ img }) => <div><img src={Pin3} alt="pinMonument" width
 const MarkerMuseum = ({ img }) => <div><img src={Pin4} alt="pinMuseum" width="30" heigth="40"/></div>;
 const MarkerStreetArt = ({ img }) => <div><img src={Pin5} alt="pinStreetArt" width="30" heigth="40"/></div>;
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class SimpleMap extends Component {
   static defaultProps = {
@@ -69,8 +70,8 @@ class SimpleMap extends Component {
   
   render() {
     const position = [this.state.location.lat, this.state.location.lng];
-    
     return (
+      // Creation de la map et des markers position et lieux
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
@@ -78,17 +79,13 @@ class SimpleMap extends Component {
           center={position}
           zoom={this.state.zoom}
         >
-          <AnyReactComponent
-            lat={50.8504500}
-            lng={4.3487800}
-            text={'Bxll'}
-          />
           <Marker
             lat={this.state.location.lat}
             lng={this.state.location.lng}
             text={'Hello World!'}
           />
-          <MarkerComics
+
+           <MarkerComics
             lat={valeurLocation[0].location.lat}
             lng={valeurLocation[0].location.lng}
             text={'Comics'}
@@ -98,12 +95,10 @@ class SimpleMap extends Component {
             lng={valeurLocation[1].location.lng}
             text={'Memorial'}
           />
-
           <MarkerMonument 
             lat={valeurLocation[2].location.lat}
             lng={valeurLocation[2].location.lng}
           />
-
           <MarkerMuseum 
           lat={valeurLocation[3].location.lat}
           lng={valeurLocation[3].location.lng}
@@ -112,11 +107,24 @@ class SimpleMap extends Component {
           lat={valeurLocation[4].location.lat}
           lng={valeurLocation[4].location.lng}
           />
-
         </GoogleMapReact>
+       
+       {/* <BrowserRouter>
+          <Switch>
+            <Route path="/" render={() => <Api handleApi={(data)=>this.setTable(data)}/>} />
+          </Switch>
+       </BrowserRouter>*/}
+        
+
         </div>
     );
   }
+ /// Recupere les données de API/index.JS
+  setTable(data){
+    valeurLocation = this.props.data
+    console.log('recupere donnéee API',valeurLocation)
+  }
+      //Recuperation de la position GPS
   getLocation = ()=> {
     return new Promise((resolve) => {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -136,9 +144,8 @@ class SimpleMap extends Component {
       });
     });
   }
+      //Assignation de la location au state
   componentDidMount(){
-    console.log('1 have user loc ? :', this.state.haveUsersLocation);
-    console.log(this.state.location);
     this.getLocation()
       .then(location =>{
         this.setState({
@@ -147,8 +154,6 @@ class SimpleMap extends Component {
           zoom:16
         })
       })
-    console.log(this.state.location);
-    console.log('2 have user loc', this.state.haveUsersLocation)
   }
 
 }
