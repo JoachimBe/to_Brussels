@@ -3,8 +3,6 @@ import React from "react";
 import './index.css';
 import Toolbar from '../Toolbar/Toolbar.js'
 import SideMenu from "../Sidemenu/Sidemenu.js";
-import Footer from "../Footer/index.js";
-
 import { NavLink } from "react-router-dom";
 
 
@@ -25,7 +23,7 @@ class AboutUs extends React.Component {
     render() {
         return (
             
-            <div>
+            <React.Fragment>
                 <Toolbar/>
               <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />          
               <NavLink to='/map'><img src="https://i.goopics.net/YkyvR.png" alt="back" className="image-back"></img></NavLink>
@@ -61,8 +59,7 @@ class AboutUs extends React.Component {
                         </figcaption>
                     </figure>
                 </div>
-                <Footer/>
-            </div>
+            </React.Fragment>
         );
     }
 }

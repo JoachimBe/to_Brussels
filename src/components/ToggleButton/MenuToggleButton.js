@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuToggleButton from "./MenuToggleButton.css"
+import "./MenuToggleButton.css";
 
 const menuToggleButton = props => (
     <button className="toggle-button" onClick={props.click}>

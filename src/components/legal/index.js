@@ -2,8 +2,6 @@ import React from "react";
 import './index.css';
 import Toolbar from '../Toolbar/Toolbar.js'
 import SideMenu from "../Sidemenu/Sidemenu";
-import Footer from "../Footer/index.js";
-
 import { NavLink } from "react-router-dom";
 
 
@@ -26,7 +24,7 @@ class Legal extends React.Component{
     render() {
       return (
           
-          <div>
+          <React.Fragment>
               <Toolbar/>
               <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />        
               <div>
@@ -77,8 +75,7 @@ class Legal extends React.Component{
                 <p>The example companies, organizations, products, people and events depicted herein are fictitious. No association with any real company, organization, product, person, or event is intended or should be inferred.</p>
                 <p>Any rights not expressly granted herein are reserved.</p>
                 </div>  
-         <Footer/>
-          </div>
+          </React.Fragment>
 
       );
     }

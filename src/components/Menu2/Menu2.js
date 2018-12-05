@@ -2,14 +2,6 @@ import React from 'react';
 import './main.css';
 import MenuToggleButton from "../ToggleButton/MenuToggleButton.js";
 import { NavLink } from "react-router-dom";
-import Toolbar from '../Toolbar/Toolbar.js';
-
-
-
-import ReactDOM from 'react-dom';
-
-
-
 
 class Menu2 extends React.Component {
     constructor(props) {
@@ -19,17 +11,10 @@ class Menu2 extends React.Component {
         this.state = { visible: true };
     }
     render() {
-        const visible = this.state.visible;
-
         return (
-            <div>
-            <Toolbar />
-
             <nav className={this.props.show ? "sideBar open" : "sideBar"}>
                     <MenuToggleButton click={this.props.menuClickHandler} />
-
                     <img className="logo-dessus" src="https://i.goopics.net/2GKx8.png" alt="logo"></img>
-
                     <div className="contenu">
                         <p className="welcome">To Brussels<p className="welcome-text">You can either choose a fixed distance that will take you over a loop course, or enter a destination adress, if you already know where to go ;-)</p> </p>
                         <form className="form" action="" method="">
@@ -42,14 +27,11 @@ class Menu2 extends React.Component {
                             </ul>
                             <label className="typeParcour lab4input" for='adress'>Your final destination:</label>
                             <input className="adress" type="text" name="adress" required size="22" onClick={ev => this.hideKiloM()} />
-
                             <input type="submit" className="buttonTwo" value="Let's Go !" />
                         </form>
                         <NavLink to="/map" className="back" ><img className="back" src="https://i.goopics.net/NNmvW.png" alt="back"></img></NavLink>
-                    </div>
-                
+                    </div>               
             </nav>
-            </div>
         );
     }
 

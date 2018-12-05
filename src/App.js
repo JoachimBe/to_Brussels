@@ -7,9 +7,7 @@ import Legal from './components/Legal/index.js';
 import AboutUs from './components/about-us/index.js'
 import './App.css';
 
-import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
-
-
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -33,34 +31,23 @@ class App extends Component {
   };
 
   render() {
-
-
     return (
       <BrowserRouter>
-        <div>
-          
-          
+      <React.Fragment>
+      <div className="app">
           <Switch>
           <Route exact path="/" component={Home} />
-
             <Route  path="/map" render={() => <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />
 } />
             <Route path="/generate-course" render={() => <Menu2 show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />
 } />
-
             <Route  path="/legal" component={Legal} />
             <Route  path="/about" component={AboutUs} />
-
-
           </Switch>
-          <body>
-          <div className="App">
+         </div>
             <Footer />
-          </div>
-          </body>
-        </div>
+            </React.Fragment>
       </BrowserRouter>
-
     );
   }
 }
