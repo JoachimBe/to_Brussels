@@ -1,0 +1,41 @@
+.header {
+  background-color: #335C62;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+.title{
+  color: white;
+}
+  
+    /*button RIGHT */
+
+.header-button .icon{
+  max-height: 1.5em;
+  width: 1.5em;
+  margin-left: 2%;
+}
+
+.header-button{
+  margin-left: 2%;
+}
+
+.header-buttons{
+  display: flex;
+  
+  align-items: baseline;
+  flex-direction:row;
+}
+
+@media screen and (min-width: 600px){
+
+  .header-buttons{
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top:50%;
+    right: 0%;
+  }
+}
