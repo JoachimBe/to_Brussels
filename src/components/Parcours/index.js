@@ -13,8 +13,8 @@ class Parcours extends Component {
 		  }
 	}
 
-	CcomponentDidMount() {
-		fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${this.state.user.lat},${this.state.user.lng}&destination=${this.state.user.lat},${this.state.user.lng}&waypoints=optimize:true|${type}&mode=walking&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`)
+	componentDidMount() {
+		fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${this.state.user.lat},${this.state.user.lng}&destination=${this.state.user.lat},${this.state.user.lng}&waypoints=optimize:true|${type}&mode=walking&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`
 			, {
 				headers: {
 					'Access-Control-Allow-Origin': '*',
