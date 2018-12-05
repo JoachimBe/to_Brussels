@@ -27,10 +27,8 @@ class SideMenu extends React.Component {
 
     selectPlace (place) {
 
-        let previousState =this.state.places;
-        previousState[place] = !previousState[place]
         this.setState({
-            places : previousState
+            places : !this.state.places[place]
         })
     }
     render (){

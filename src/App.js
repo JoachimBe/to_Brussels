@@ -5,6 +5,7 @@ import Menu2 from './components/Menu2/Menu2.js';
 import Home from './components/Home/home.js';
 import Legal from './components/Legal/index.js';
 import AboutUs from './components/about-us/index.js'
+import './App.css';
 
 import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
 
@@ -38,6 +39,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           
+          
           <Switch>
           <Route exact path="/" component={Home} />
 
@@ -51,9 +53,11 @@ class App extends Component {
 
 
           </Switch>
+          <body>
           <div className="App">
             <Footer />
           </div>
+          </body>
         </div>
       </BrowserRouter>
 

@@ -1,20 +1,4 @@
-.carte{
-    background-image: url('https://www.citymetric.com/sites/default/files/styles/nodeimage/public/article_2016/08/gmaps_head.png?itok=MZsYvZFq') no-repeat center center fixed;
-    width:1300px;
-    position:fixed;
-    left:0;
-    z-index: -2;
-}
 
-body{
-    text-align: justify;
-    margin: 1em;
-    width:93%;
-    position:absolute;
-    top:40px;
-    left:5%;
-    
-}
 .image-back{
     width:40px;
    display:block;
@@ -35,7 +19,6 @@ h1{
 h2{
     padding:10px;
     padding-bottom:20px 0;
-    left:0;
 }
 h3{
     padding:20px 0;
