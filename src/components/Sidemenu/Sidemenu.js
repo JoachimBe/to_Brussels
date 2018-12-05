@@ -1,6 +1,7 @@
 import React from 'react';
 import MenuToggleButton from "../ToggleButton/MenuToggleButton.js";
 import './Sidemenu.css';
+import Toolbar from '../Toolbar/Toolbar.js';
 import {NavLink} from "react-router-dom";
 
 class SideMenu extends React.Component {
@@ -19,14 +20,17 @@ class SideMenu extends React.Component {
 
     selectPlace (place) {
 
+        let previousState = this.state.places;
+        previousState[place] =  !this.state.places[place];
         this.setState({
-            places : !this.state.places[place]
+            places : previousState
         })
     }
     render (){
     return ( 
+        <React.Fragment>
+        <Toolbar/>
     <nav className={this.props.show ? "side-menu open" : "side-menu"}>
-    
         <MenuToggleButton click={this.props.menuClickHandler}/>
         <div className="scroll">
         <div className="container">
@@ -45,6 +49,7 @@ class SideMenu extends React.Component {
     </div>
     </div>
     </nav>
+    </React.Fragment>
     )}
 }
 

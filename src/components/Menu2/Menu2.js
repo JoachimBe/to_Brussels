@@ -2,6 +2,7 @@ import React from 'react';
 import './main.css';
 import MenuToggleButton from "../ToggleButton/MenuToggleButton.js";
 import { NavLink } from "react-router-dom";
+import Toolbar from '../Toolbar/Toolbar.js';
 
 class Menu2 extends React.Component {
     constructor(props) {
@@ -26,6 +27,8 @@ class Menu2 extends React.Component {
     render(){
         const visible = this.state.visible;
         return(
+            <React.Fragment>
+                 <Toolbar/>
             <nav className={this.props.show ? "sideBar open" : "sideBar"}>
             <div  className={this.props.show ? "side-menu.open" : "sideBar"}>
                     <MenuToggleButton click={this.props.menuClickHandler}/>
@@ -51,6 +54,7 @@ class Menu2 extends React.Component {
                 </div>
             </div>
             </nav>
+            </React.Fragment>
         );
     }
 

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import SideMenu from "./components/Sidemenu/Sidemenu.js";
-import Footer from './components/footer/index.js';
+import Footer from './components/Footer/index.js';
 import Menu2 from './components/Menu2/Menu2.js';
 import Home from './components/Home/home.js';
-import Legal from './components/legal/index.js';
+import Legal from './components/Legal/index.js';
 import AboutUs from './components/about-us/index.js'
 import './App.css';
 
