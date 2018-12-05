@@ -1,14 +1,13 @@
-import React from'react';
+import React from 'react';
 import './main.css';
 import MenuToggleButton from "../ToggleButton/MenuToggleButton.js";
 
+import { NavLink } from "react-router-dom";
 
 
 
-
-
-class Menu2 extends React.Component{
-    constructor(props){
+class Menu2 extends React.Component {
+    constructor(props) {
         super(props);
         this.handleShowClick = this.handleShowClick.bind(this);
         this.handleHideClick = this.handleHideClick.bind(this);
@@ -76,27 +75,22 @@ class Menu2 extends React.Component{
 
     hideKiloM(){
         let nameToHide = document.getElementsByName('listK');
-        for(let i = 0; i < nameToHide.length; i++){
-            this.setState({display : "hidden"});
-        } 
+        for (let i = 0; i < nameToHide.length; i++) {
+            this.setState({ display: "hidden" });
+        }
     }
-    showKilom(){
+    showKilom() {
         let nameToShow = document.getElementsByName('listK');
-        for(let k = 0; k < nameToShow.length; k++){
-            this.setState({display : ""});
+        for (let k = 0; k < nameToShow.length; k++) {
+            this.setState({ display: "" });
         }
     }
 
-    handleShowClick(){
-        this.setState({visible : true});
+    handleShowClick() {
+        this.setState({ visible: true });
     }
-    handleHideClick(){
-        this.setState({visible : false});
-    }
-    onChange (e){
-        this.setState({
-            /////////////////////////////////////////
-        });
+    handleHideClick() {
+        this.setState({ visible: false });
     }
     submitForm(e){
         e.preventDefault();
