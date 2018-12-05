@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+
 import './App.css';
 import Menu2 from './components/Menu2/Menu2'
 import { Route, BrowserRouter, Switch} from 'react-router-dom';
-import Header from './components/Header/Header.js';
+
+import DisplayApi from './components/API/index.js';
+
 
 class App extends Component {
 
@@ -31,6 +34,7 @@ class App extends Component {
           <Route path="/" render={() => <Menu2 valMenu2={(datam2)=>this.setMenu2(datam2)} />} />
         </Switch>
         </BrowserRouter>  
+
     );
   }
 
