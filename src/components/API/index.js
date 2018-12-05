@@ -55,13 +55,6 @@ class DisplayApi extends Component {
   }
 
   render(){
-    return (
-      <div className="App">
-        <header className="App-header">
-          <p onChange={event => this.getPlaces(event)} >text</p>
-        </header>
-      </div>
-    );
   }
 }
 
