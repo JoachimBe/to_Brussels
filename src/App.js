@@ -22,7 +22,7 @@ class App extends Component {
       <div className="App">
 
         <DataProvider value={this.state.places} >
-          <Test callback={(data) => this.handlePlacesChoice(data)} />
+          
         </DataProvider>
 
       </div>
