@@ -2,6 +2,7 @@ import React from 'react';
 import './main.css';
 import MenuToggleButton from "../ToggleButton/MenuToggleButton.js";
 import { NavLink } from "react-router-dom";
+import Toolbar from '../Toolbar/Toolbar.js';
 
 class Menu2 extends React.Component {
     constructor(props) {
@@ -12,6 +13,8 @@ class Menu2 extends React.Component {
     }
     render() {
         return (
+            <React.Fragment>
+                 <Toolbar/>
             <nav className={this.props.show ? "sideBar open" : "sideBar"}>
                     <MenuToggleButton click={this.props.menuClickHandler} />
                     <img className="logo-dessus" src="https://i.goopics.net/2GKx8.png" alt="logo"></img>
@@ -32,6 +35,7 @@ class Menu2 extends React.Component {
                         <NavLink to="/map" className="back" ><img className="back" src="https://i.goopics.net/NNmvW.png" alt="back"></img></NavLink>
                     </div>               
             </nav>
+            </React.Fragment>
         );
     }
 
