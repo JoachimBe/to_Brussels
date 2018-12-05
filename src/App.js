@@ -14,7 +14,11 @@ class App extends Component {
     super(props);
     this.state = {
       sideMenuOpen: false,
-      places: {}
+      places: {},
+      kilometres: 0,
+      destination: {
+          adress: ''
+      }
     };
   }
 
@@ -30,6 +34,16 @@ class App extends Component {
     });
   };
 
+  setMenu2(data){
+    this.setState({
+      kilometres: data.kilometres,
+      adress: data.adress
+    })
+  }
+  componentDidUpdate(){
+    console.log('ICI',this.state);
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -39,7 +53,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
             <Route  path="/map" render={() => <SideMenu show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />
 } />
-            <Route path="/generate-course" render={() => <Menu2 show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} />
+            <Route path="/generate-course" render={() => <Menu2 show={this.state.sideMenuOpen} menuClickHandler={this.menuToggleClickHandler} valMenu2={(datam2)=>this.setMenu2(datam2)} />
 } />
             <Route  path="/legal" component={Legal} />
             <Route  path="/about" component={AboutUs} />
@@ -50,6 +64,7 @@ class App extends Component {
       </BrowserRouter>
     );
   }
+
 }
 
 export default App;
