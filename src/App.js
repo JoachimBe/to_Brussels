@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Map from './components/Map/Map'
 
+import DisplayApi from './components/API/index.js';
+
 class App extends Component {
 
   constructor(props){
