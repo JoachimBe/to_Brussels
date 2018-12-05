@@ -1,0 +1,17 @@
+.toolbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: #00648B;
+    height:56px;
+    
+}
+.titre-milieu{
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:15px;
+    margin:0;
+}
