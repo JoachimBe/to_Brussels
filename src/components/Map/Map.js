@@ -9,6 +9,7 @@ import Pin5 from './streetArt.png';
 import Api from './index'
 
 let valeurLocation = [];
+
 const Marker = ({ img }) => <div><img src={icon} alt="ici" width="30" heigth="40"/></div>;
 
 const MarkerComics = ({ img }) => <div><img src={Pin1} alt="pinComics" width="30" heigth="40"/></div>;
@@ -33,6 +34,7 @@ class SimpleMap extends Component {
 
   
   render() {
+    let {places} = this.props;
     const position = [this.state.location.lat, this.state.location.lng];
     return (
       // Creation de la map et des markers position et lieux
@@ -52,7 +54,7 @@ class SimpleMap extends Component {
         </GoogleMapReact>
        
 
-             <Api handleApi={(data)=>this.setTable(data)} />
+             <Api handleApi={(data)=>this.setTable(data)} places={places}/>
 
       
         </div>

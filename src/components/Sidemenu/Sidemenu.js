@@ -18,6 +18,10 @@ class SideMenu extends React.Component {
         }
     }
 
+    monteDonnee(){
+        this.props.valMenu1(this.state)
+        }
+
     selectPlace (place) {
 
         let previousState = this.state.places;
@@ -25,7 +29,9 @@ class SideMenu extends React.Component {
         this.setState({
             places : previousState
         })
+        this.monteDonnee();
     }
+    
     render (){
     return ( 
         <React.Fragment>

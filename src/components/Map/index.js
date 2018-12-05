@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-const tab = [2, 3, 4];
 let count = 0;
 const locationName = ['museums+in+brussels', 'monuments+in+brussels', 'memorials+in+brussels', 'street+art+in+brussels', 'parcours+BD+bruxelles']
 class DisplayApi extends Component {
@@ -8,8 +7,6 @@ class DisplayApi extends Component {
     super(props);
     this.state = {
       places: {
-        museums:true,
-        monuments:true
       },
       location: [],
       user: {
@@ -18,12 +15,11 @@ class DisplayApi extends Component {
       }
     }
   };
-
   getPlaces(event) {
     this.setState({
       places: event.target.value,
     });
-  }
+  } 
 
   callPlaceApi(type) {
     fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=${type}&location=${this.state.user.lat},${this.state.user.lng}&radius=${this.state.userdistance}&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`
@@ -49,19 +45,19 @@ class DisplayApi extends Component {
     }
   }
 
-  componentDidUpdate(){
-    if(prevState.location !== this.state.location){
+  componentDidUpdate(prevProps, prevState){
+    console.log(this.state.places)
+     if(prevState.location !== this.state.location){
       this.props.handleApi(this.state.location)
       console.log('In INDEX did mount', this.state.location )
-    }
-
+    } 
   }
 
   render(){
     return (
       <div className="App">
         <header className="App-header">
-          <p onChange={event => this.getPlaces(event)} >text</p>
+          <textarea onChange={event => this.getPlaces(event)} >{this.props.places.places}</textarea>
         </header>
       </div>
     );
