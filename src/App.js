@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import SideMenu from "./components/slideMenu/index.js";
 import Map from './components/Map/Map'
 
-import { Route, BrowserRouter, Switch, NavLink } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 
 
 

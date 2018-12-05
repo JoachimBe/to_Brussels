@@ -5,46 +5,10 @@ import Pin1 from './comics.png';
 import Pin2 from './memorial.png';
 import Pin3 from './monument.png';
 import Pin4 from './museum.png';
-import Pin5 from './streetArt.png';
-// import Api from './index'
-//import { Route, BrowserRouter, Switch} from 'react-router-dom';
+import Pin5 from './streetArt.png'; 
+import Api from './index'
 
-let valeurLocation = [
-  {
-    location:{
-    lat: 50.833343, 
-    lng:4.366629
-    }
-  }
-  ,
-  {
-    location:{
-    lat:50.8301436,
-    lng:4.3402184
-    }
-  }
-  ,
-  {
-    location:{
-      lat:50.813433,
-      lng:4.324834
-      }
-  }
-  ,
-  {
-    location:{
-      lat:50.7875382,
-      lng:4.3164506
-    }
-  }
-  ,
-  {
-    location:{
-      lat:50.771023,
-      lng:4.311616
-      }
-  }
-];
+let valeurLocation = [];
 const Marker = ({ img }) => <div><img src={icon} alt="ici" width="30" heigth="40"/></div>;
 
 const MarkerComics = ({ img }) => <div><img src={Pin1} alt="pinComics" width="30" heigth="40"/></div>;
@@ -85,44 +49,18 @@ class SimpleMap extends Component {
             text={'Hello World!'}
           />
 
-           <MarkerComics
-            lat={valeurLocation[0].location.lat}
-            lng={valeurLocation[0].location.lng}
-            text={'Comics'}
-            />
-          <MarkerMemorial
-            lat={valeurLocation[1].location.lat}
-            lng={valeurLocation[1].location.lng}
-            text={'Memorial'}
-          />
-          <MarkerMonument 
-            lat={valeurLocation[2].location.lat}
-            lng={valeurLocation[2].location.lng}
-          />
-          <MarkerMuseum 
-          lat={valeurLocation[3].location.lat}
-          lng={valeurLocation[3].location.lng}
-          />
-          <MarkerStreetArt 
-          lat={valeurLocation[4].location.lat}
-          lng={valeurLocation[4].location.lng}
-          />
         </GoogleMapReact>
        
-       {/* <BrowserRouter>
-          <Switch>
-            <Route path="/" render={() => <Api handleApi={(data)=>this.setTable(data)}/>} />
-          </Switch>
-       </BrowserRouter>*/}
-        
 
+             <Api handleApi={(data)=>this.setTable(data)} />
+
+      
         </div>
     );
   }
  /// Recupere les données de API/index.JS
   setTable(data){
-    valeurLocation = this.props.data
-    console.log('recupere donnéee API',valeurLocation)
+    valeurLocation = data
   }
       //Recuperation de la position GPS
   getLocation = ()=> {

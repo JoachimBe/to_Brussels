@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+const tab = [2, 3, 4];
 let count = 0;
 const locationName = ['museums+in+brussels', 'monuments+in+brussels', 'memorials+in+brussels', 'street+art+in+brussels', 'parcours+BD+bruxelles']
 class DisplayApi extends Component {
@@ -48,11 +49,12 @@ class DisplayApi extends Component {
     }
   }
 
-  componentDidUpdate(prevProps, prevState){
+  componentDidUpdate(){
     if(prevState.location !== this.state.location){
       this.props.handleApi(this.state.location)
       console.log('In INDEX did mount', this.state.location )
     }
+
   }
 
   render(){
