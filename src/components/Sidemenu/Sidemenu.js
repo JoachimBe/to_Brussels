@@ -18,18 +18,18 @@ class SideMenu extends React.Component {
         }
     }
 
-    monteDonnee(){
-        this.props.valMenu1(this.state)
+    componentDidUpdate(prevProps, prevState){
+        if(prevState.places !== this.state.places){
+            this.props.valMenu1(this.state.places)
         }
+    }
 
     selectPlace (place) {
-
-        let previousState = this.state.places;
+        let previousState = Object.assign({}, this.state.places);
         previousState[place] =  !this.state.places[place];
         this.setState({
             places : previousState
         })
-        this.monteDonnee();
     }
     
     render (){

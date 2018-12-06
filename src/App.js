@@ -24,8 +24,15 @@ class App extends Component {
   }
 
   handleChange(data) {
+
+    const newState = Object.assign({}, data)
+    for (let item in newState) {
+      if(!newState[item]){
+        delete newState[item];
+      }
+    }
     this.setState({
-      places: data
+      places: newState
     })
   }
 
@@ -41,8 +48,6 @@ class App extends Component {
       adress: data.adress
     })
   }
-
-
   render() {
 
 
