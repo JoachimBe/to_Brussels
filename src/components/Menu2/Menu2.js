@@ -1,8 +1,9 @@
 import React from 'react';
 import './main.css';
 import MenuToggleButton from "../ToggleButton/MenuToggleButton.js";
-import { NavLink } from "react-router-dom";
 import Toolbar from '../Toolbar/Toolbar.js';
+import {NavLink} from "react-router-dom";
+
 
 class Menu2 extends React.Component {
     constructor(props) {
@@ -25,7 +26,6 @@ class Menu2 extends React.Component {
     
         
     render(){
-        const visible = this.state.visible;
         return(
             <React.Fragment>
                  <Toolbar/>
@@ -50,7 +50,7 @@ class Menu2 extends React.Component {
                     
                     <input type="submit" className="buttonTwo" value="Go to map"/>
                 </form> 
-                <a className="back" href="#"><img className="back" src="https://i.goopics.net/NNmvW.png" alt="back"></img></a>
+                <NavLink className="back" to="/map"><img className="back" src="https://i.goopics.net/NNmvW.png" alt="back"></img></NavLink>
                 </div>
             </div>
             </nav>
